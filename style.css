@@ -1,0 +1,200 @@
+/* CSS3 styles */
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url('AnonymousPro-Regular.eot');
+    src: local('Anonymous Pro Regular'), local('AnonymousPro-Regular'),
+         url('AnonymousPro-Regular.eot?#iefix') format('embedded-opentype'),
+         url('AnonymousPro-Regular.woff2') format('woff2'),
+         url('AnonymousPro-Regular.woff') format('woff'),
+         url('AnonymousPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 7px;
+    line-height: 3;
+}
+
+:root {
+    --primary-color: #ee4040;
+}
+
+body {
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: 400; /* Normal weight */
+    color: #ccc;
+    background-image: radial-gradient(circle at top left, var(--primary-color), #0000);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: auto;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main content styles */
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: wheat;
+    font-weight: 500; /* Bold weight */
+    margin-bottom: 20px;
+}
+article {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #ccc
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #ccc;
+}
+
+/* Error message styles */
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Success message styles */
+.success {
+    color: green;
+    margin-bottom: 10px;
+}
+
+/* Input focus styles */
+input:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px #007BFF;
+}
+
+/* Input required styles */
+input:required {
+box-shadow: none;
+}
+
+/* Input required and invalid styles */
+input:required:invalid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+/* Input required and valid styles */
+input:required:valid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+/* Button styles */
+button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+/* Footer styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+footer p {
+    margin: 0 auto;
+}
